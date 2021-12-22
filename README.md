@@ -1,2 +1,2 @@
-# dotfiles
-Dotfiles managed with chezmoi
+# Marlin Gingerich's $HOME
+Dotfiles managed with [chezmoi](https://github.com/twpayne/chezmoi).
