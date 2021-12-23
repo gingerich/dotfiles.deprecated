@@ -1,0 +1,19 @@
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/core"
+# Official Amazon AWS command-line interface
+brew "awscli"
+# Manage your dotfiles across multiple diverse machines, securely
+brew "chezmoi"
+# GitHub command-line tool
+brew "gh"
+# Lightweight and flexible command-line JSON processor
+brew "jq"
+# Hash utilities
+brew "md5sha1sum"
+# Command-line helper for the 1Password password manager
+cask "1password-cli"
+# HTTP and GraphQL Client
+cask "insomnia"
+# Kubernetes and container management on the desktop
+cask "rancher"
