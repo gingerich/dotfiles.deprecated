@@ -1,0 +1,56 @@
+# load zgenom
+source "${HOME}/.zgenom/zgenom.zsh"
+
+# Check for plugin and zgenom updates every 7 days
+# This does not increase the startup time.
+zgenom autoupdate
+
+export NVM_LAZY_LOAD=true
+
+#export EDITOR=code
+
+# if the init script doesn't exist
+if ! zgenom saved; then
+  echo "Creating a zgenom save"
+
+  # options
+  zstyle :omz:plugins:ssh-agent identities bonfire_id_rsa
+  zstyle :omz:plugins:ssh-agent ssh-add-args --apple-use-keychain
+
+  # specify plugins here
+  zgenom ohmyzsh
+  zgenom ohmyzsh plugins/git
+  zgenom ohmyzsh plugins/sudo
+  zgenom ohmyzsh plugins/kubectl
+  zgenom ohmyzsh plugins/ssh-agent
+  zgenom load lukechilds/zsh-nvm
+  zgenom load zsh-users/zsh-syntax-highlighting
+  zgenom load zsh-users/zsh-history-substring-search
+
+  # completions
+  zgenom load zsh-users/zsh-completions src
+
+  # theme
+  zgenom load spaceship-prompt/spaceship-prompt spaceship
+  # zgenom ohmyzsh themes/clean
+
+  # zgenom prezto
+  # zgenom prezto git
+  # zgenom prezto syntax-highlighting
+
+  # generate the init script from plugins above
+  zgenom save
+
+  # Compile your zsh files
+  # zgenom compile "$HOME/.zshrc"
+  # zgenom compile $ZDOTDIR
+fi
+
+SPACESHIP_PROMPT_SEPARATE_LINE=false
+SPACESHIP_NODE_SHOW=false
+SPACESHIP_PACKAGE_SHOW=false
+
+alias rcx="sudo launchctl unload /Library/LaunchDaemons/com.opendns.osx.RoamingClientConfigUpdater.plist"
+
+alias docker=nerdctl
+
