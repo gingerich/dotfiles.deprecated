@@ -7,13 +7,35 @@ brew "awscli"
 brew "chezmoi"
 # GitHub command-line tool
 brew "gh"
+# Open source programming language to build simple/reliable/efficient software
+brew "go"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
+# Mac App Store command-line interface
+brew "mas"
 # Hash utilities
 brew "md5sha1sum"
 # Command-line helper for the 1Password password manager
 cask "1password-cli"
+# Web browser
+cask "firefox"
+# Desktop automation application
+cask "hammerspoon"
 # HTTP and GraphQL Client
 cask "insomnia"
+# Terminal emulator as alternative to Apple's Terminal app
+cask "iterm2"
 # Kubernetes and container management on the desktop
 cask "rancher"
+# Music streaming service
+cask "spotify"
+# Open-source code editor
+cask "visual-studio-code"
+# Multimedia player
+cask "vlc"
+mas "Colors for Hue", id: 581915465
+mas "GarageBand", id: 682658836
+mas "Magnet", id: 441258766
+mas "MainStage", id: 634159523
+mas "NordVPN IKE", id: 1116599239
+mas "Remote Mouse", id: 403195710

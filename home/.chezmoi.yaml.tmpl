@@ -1,0 +1,10 @@
+{{- $email := "" -}}
+{{- if (hasKey . "email") -}}
+{{-   $email = .email -}}
+{{- else -}}
+{{-   $email = promptString "email" -}}
+{{- end -}}
+
+macos: {{ eq .chezmoi.os "darwin" }}
+linux: {{ eq .chezmoi.os "linux" }}
+windows: {{ eq .chezmoi.os "windows" }}

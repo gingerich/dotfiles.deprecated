@@ -1,0 +1,18 @@
+[user]
+	name = gingerich
+	email = marlin.gingerich@gmail.com
+[core]
+	excludesfile = {{ .chezmoi.homeDir }}/.gitignore_global
+	editor = code --wait
+[commit]
+	template = {{ .chezmoi.homeDir }}/.stCommitMsg
+[push]
+	default = current
+[merge]
+	tool = vscode
+[mergetool "vscode"]
+	cmd = code --wait $MERGED
+[diff]
+	tool = vscode
+[difftool "vscode"]
+	cmd = code --wait --diff $LOCAL $REMOTE
